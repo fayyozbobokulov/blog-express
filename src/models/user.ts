@@ -22,6 +22,9 @@ export class User {
   @Column()
   email!: string;
 
+  @Column()
+  username: string;
+
   @OneToMany((_type) => Post, (post: Post) => post.user)
   posts!: Array<Post>;
 
